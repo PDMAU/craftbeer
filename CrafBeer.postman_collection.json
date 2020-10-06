@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "c79a5436-9e02-436f-820f-0c89c8c1348a",
+		"name": "CrafBeer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Adicionar Beer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"name\": \"Cerveja Lokal\",\r\n  \"ingredients\": \"[Cevada, Trigo, Canela]\",\r\n  \"alcoholContent\": \"10%\",\r\n  \"price\": 5,\r\n  \"category\": \"Custo Beneficio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/beerhouse/beers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beerhouse",
+						"beers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Beer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VybmFtZSIsImV4cCI6MTU5NTQ0MTc3MX0.Hp_uPx8Y21j5EqLPhMfONBcL-PalmCD7TVCMA_Tg1HVEFXbFnNY2NSK6rZpYfngXHrChAUklD_wCeGjOrWcaXg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Teste\",\r\n  \"ingredients\": \"Teste\",\r\n  \"alcoholContent\": \"Teste\",\r\n  \"price\": 100,\r\n  \"category\": \"Teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/beerhouse/beers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beerhouse",
+						"beers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todas Beer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VybmFtZSIsImV4cCI6MTU5NTQ0MTc3MX0.Hp_uPx8Y21j5EqLPhMfONBcL-PalmCD7TVCMA_Tg1HVEFXbFnNY2NSK6rZpYfngXHrChAUklD_wCeGjOrWcaXg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/beerhouse/beers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beerhouse",
+						"beers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar uma Beer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VybmFtZSIsImV4cCI6MTU5NTQ0MTc3MX0.Hp_uPx8Y21j5EqLPhMfONBcL-PalmCD7TVCMA_Tg1HVEFXbFnNY2NSK6rZpYfngXHrChAUklD_wCeGjOrWcaXg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/beerhouse/beers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beerhouse",
+						"beers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar alguns atributos de uma Beer",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VybmFtZSIsImV4cCI6MTU5NTQ0MTc3MX0.Hp_uPx8Y21j5EqLPhMfONBcL-PalmCD7TVCMA_Tg1HVEFXbFnNY2NSK6rZpYfngXHrChAUklD_wCeGjOrWcaXg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n  \"name\": \"Teste5\",  \r\n  \"price\": 200.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/beerhouse/beers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beerhouse",
+						"beers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar uma Beer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VybmFtZSIsImV4cCI6MTU5NTQ0MTc3MX0.Hp_uPx8Y21j5EqLPhMfONBcL-PalmCD7TVCMA_Tg1HVEFXbFnNY2NSK6rZpYfngXHrChAUklD_wCeGjOrWcaXg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/beerhouse/beers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beerhouse",
+						"beers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

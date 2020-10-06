@@ -1,0 +1,8 @@
+CREATE TABLE beer (
+id INT PRIMARY KEY,
+name VARCHAR NOT NULL,
+ingredients VARCHAR NOT NULL,
+alcoholContent VARCHAR NOT NULL,
+price FLOAT NOT NULL,
+category	VARCHAR  NOT NULL
+);
